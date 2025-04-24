@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEditTaskActivity"
+    android:padding="16dp">
+
+    <!-- Title input -->
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Description input -->
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        app:layout_constraintTop_toBottomOf="@id/editTextTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Due date input -->
+    <EditText
+        android:id="@+id/editTextDueDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Due Date (dd/MM/yyyy)"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/buttonSaveTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Task"
+        app:layout_constraintTop_toBottomOf="@id/editTextDueDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
